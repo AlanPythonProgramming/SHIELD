@@ -29,7 +29,7 @@ Otherwise, you should determine whether the query is related to software enginee
 
 db = initialize_chromadb()
 collection = db.get_or_create_collection(name="comp1531_specs")
-conversations = read_json('../testing_data/test_mixed_var.json')
+conversations = read_json('../testing_data/test.json')
 outputs = []
 
 for conversation in conversations:
@@ -66,4 +66,4 @@ for conversation in conversations:
 
     outputs.append(output)
 
-write_json(outputs, "../evaluations/shield_outputs.json")
+write_json("../evaluations/shield_outputs.json", outputs)

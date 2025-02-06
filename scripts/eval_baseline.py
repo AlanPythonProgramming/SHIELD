@@ -22,7 +22,7 @@ Response: <response>
 
 db = initialize_chromadb()
 collection = db.get_or_create_collection(name="comp1531_specs")
-conversations = read_json("../testing data/test_mixed_var.json")
+conversations = read_json("../testing data/test.json")
 outputs = []
 
 for conversation in conversations:
@@ -43,4 +43,4 @@ for conversation in conversations:
         
     outputs.append(output)
 
-write_json(outputs, "../evaluations/baseline_outputs.json")
+write_json("../evaluations/baseline_outputs.json", outputs)
